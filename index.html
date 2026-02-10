@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaidSalary - Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        .container { max-width: 680px; margin: 0 auto; padding: 40px 20px; }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .logo {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, #1a64d8, #2aa876);
+            border-radius: 20px;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 36px; color: white; font-weight: bold;
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 28px; margin-bottom: 4px; }
+        .subtitle { color: #86868b; font-size: 16px; margin-bottom: 8px; }
+        .company { color: #86868b; font-size: 13px; }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 { font-size: 20px; margin-bottom: 16px; }
+        .card h3 { font-size: 16px; margin: 16px 0 8px; color: #1a64d8; }
+        .card p { color: #424245; margin-bottom: 12px; }
+        .card ul { padding-left: 20px; color: #424245; }
+        .card li { margin-bottom: 8px; }
+        a { color: #1a64d8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-btn {
+            display: inline-block;
+            background: #1a64d8;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        .contact-btn:hover { background: #1550b0; text-decoration: none; }
+        .faq-q { font-weight: 600; margin-bottom: 4px; }
+        .faq-a { color: #424245; margin-bottom: 16px; }
+        .footer {
+            text-align: center;
+            padding: 32px 0;
+            color: #86868b;
+            font-size: 13px;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background: #e8e8ed;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 0 4px;
+        }
+        .lang-btn.active { background: #1a64d8; color: white; }
+        .zh { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">$</div>
+            <h1>MaidSalary</h1>
+            <div class="subtitle">Helper Pay Tracker</div>
+            <div class="company">by Monopole Technologies</div>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="showLang('en')">English</button>
+            <button class="lang-btn" onclick="showLang('zh')">中文</button>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="en">
+            <div class="card">
+                <h2>Contact Support</h2>
+                <p>Having trouble with MaidSalary? We're here to help.</p>
+                <a href="mailto:support@monopoletechnologies.com" class="contact-btn">Email Support</a>
+                <p style="margin-top: 16px; font-size: 14px; color: #86868b;">
+                    support@monopoletechnologies.com<br>
+                    We typically respond within 24 hours.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Frequently Asked Questions</h2>
+
+                <p class="faq-q">How do I link my maid to my account?</p>
+                <p class="faq-a">As an employer, tap the menu (⋯) button, select "Link Maid", and enter your maid's registered mobile number.</p>
+
+                <p class="faq-q">Can multiple employers link to the same maid?</p>
+                <p class="faq-a">Yes! For example, both husband and wife can create separate employer accounts and link to the same maid. All salary payments are synced and visible to everyone.</p>
+
+                <p class="faq-q">How is the outstanding balance calculated?</p>
+                <p class="faq-a">Balance = Total salary owed (monthly salary × months worked) minus confirmed payments, plus any initial balance you set.</p>
+
+                <p class="faq-q">What happens when I delete a payment?</p>
+                <p class="faq-a">Pending payments are deleted immediately. Accepted payments require the maid's confirmation before deletion. The balance only updates after the maid confirms.</p>
+
+                <p class="faq-q">How do I switch language?</p>
+                <p class="faq-a">Tap the menu (⋯) button on your home screen and select the language toggle. The app supports English and Chinese.</p>
+
+                <p class="faq-q">Is my data secure?</p>
+                <p class="faq-a">Yes. MaidSalary uses Firebase Authentication and Cloud Firestore. Your data is encrypted in transit and at rest.</p>
+            </div>
+
+            <div class="card">
+                <h2>App Features</h2>
+                <ul>
+                    <li>Track monthly salary with effective dates</li>
+                    <li>Distribute salary via cash or DashPay</li>
+                    <li>Real-time outstanding balance</li>
+                    <li>Payment history with status &amp; date filters</li>
+                    <li>Multiple employers per maid</li>
+                    <li>Insurance expiry reminders</li>
+                    <li>Bilingual: English &amp; Chinese</li>
+                    <li>Persistent login</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CHINESE -->
+        <div class="zh">
+            <div class="card">
+                <h2>联系支持</h2>
+                <p>使用 MaidSalary 遇到问题？我们随时为您提供帮助。</p>
+                <a href="mailto:support@monopoletechnologies.com" class="contact-btn">发送邮件</a>
+                <p style="margin-top: 16px; font-size: 14px; color: #86868b;">
+                    support@monopoletechnologies.com<br>
+                    我们通常在24小时内回复。
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>常见问题</h2>
+
+                <p class="faq-q">如何将女佣关联到我的账户？</p>
+                <p class="faq-a">作为雇主，点击菜单（⋯）按钮，选择"关联女佣"，输入女佣注册的手机号码。</p>
+
+                <p class="faq-q">多个雇主可以关联同一个女佣吗？</p>
+                <p class="faq-a">可以！例如夫妻双方可以各自创建雇主账户并关联同一位女佣，所有薪资记录实时同步。</p>
+
+                <p class="faq-q">未付余额是如何计算的？</p>
+                <p class="faq-a">余额 = 应付薪资总额（月薪 × 工作月数）- 已确认付款 + 初始余额。</p>
+
+                <p class="faq-q">删除付款会怎样？</p>
+                <p class="faq-a">待确认的付款可直接删除。已确认的付款需要女佣同意后才能删除，余额在女佣确认后才会更新。</p>
+
+                <p class="faq-q">如何切换语言？</p>
+                <p class="faq-a">点击主页菜单（⋯）按钮，选择语言切换选项。应用支持中文和英文。</p>
+
+                <p class="faq-q">我的数据安全吗？</p>
+                <p class="faq-a">安全。MaidSalary 使用 Firebase 身份验证和 Cloud Firestore，数据在传输和存储时均已加密。</p>
+            </div>
+
+            <div class="card">
+                <h2>应用功能</h2>
+                <ul>
+                    <li>追踪月薪及生效日期</li>
+                    <li>通过现金或 DashPay 发放薪资</li>
+                    <li>实时未付余额</li>
+                    <li>按状态和日期筛选付款记录</li>
+                    <li>支持多雇主关联同一女佣</li>
+                    <li>保险到期提醒</li>
+                    <li>中英双语</li>
+                    <li>持久登录</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Monopole Technologies. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.querySelectorAll('.en, .zh').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
